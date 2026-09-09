@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedro Pereira 55600 — Deputado Estadual</title>
+<link rel="icon" type="image/png" href="favicon-pedro.png">
+<style>
+  @font-face{font-family:'Gilroy';src:url('fontes/Gilroy-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Gilroy';src:url('fontes/Gilroy-Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Gilroy';src:url('fontes/Gilroy-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Gilroy';src:url('fontes/Gilroy-Bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Gilroy';src:url('fontes/Gilroy-ExtraBold.ttf') format('truetype');font-weight:800;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Gilroy';src:url('fontes/Gilroy-Black.ttf') format('truetype');font-weight:900;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Gilroy';src:url('fontes/Gilroy-BlackItalic.ttf') format('truetype');font-weight:900;font-style:italic;font-display:swap;}
+
+  :root{
+    --indigo:#3B3F86;
+    --blue:#0075B2;
+    --green:#028B43;
+    --red:#DF1A24;
+    --gold:#FEC502;
+    --bg-orange:#FF9E00;
+    --bg-gold:#FFD101;
+    --cream:#FFFBF0;
+    --ink:#1F2250;
+    --gray-footer:#E9E9EC;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg-gold);
+    color:var(--ink);
+    font-family:'Gilroy',sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  .display{font-family:'Gilroy',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:0.01em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    padding:0;
+    background:linear-gradient(160deg, rgba(255,158,0,0.15), rgba(255,158,0,0.05)), url('bg-pedro-pereira.jpg') center/cover no-repeat;
+  }
+  .hero-photo{
+    position:absolute;top:40px;left:0;bottom:0;width:42%;
+    z-index:2;overflow:hidden;
+  }
+  .hero-photo img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:contain;object-position:left bottom;
+    display:block;
+  }
+  .hero-content{
+    margin-left:42%;
+    padding:80px 64px 90px;display:flex;flex-direction:column;justify-content:flex-start;
+    max-width:640px;position:relative;z-index:2;
+  }
+  .hero-logo{width:100%;max-width:460px;height:auto;}
+  .hero-numero{width:100%;max-width:400px;height:auto;margin-top:18px;}
+  .hero-actions{display:flex;gap:32px;margin-top:40px;flex-wrap:wrap;}
+  .link-cta{
+    font-family:'Gilroy',sans-serif;font-weight:800;font-size:16px;letter-spacing:0.06em;
+    color:var(--indigo);text-decoration:none;padding-bottom:5px;border-bottom:2px solid var(--red);
+  }
+  @media(max-width:860px){
+    .hero{min-height:auto;display:flex;flex-direction:column;}
+    .hero-photo{position:static;width:100%;height:auto;order:2;}
+    .hero-photo img{
+      position:static;display:block;margin:0 auto;
+      width:55%;max-width:300px;height:auto;
+      object-fit:unset;object-position:unset;
+    }
+    .hero-content{order:1;margin-left:0;padding:20px 28px 6px;max-width:none;align-items:center;text-align:center;}
+    .hero-logo{max-width:320px;}
+    .hero-numero{max-width:280px;margin-top:10px;}
+    .hero-logo,.hero-numero{margin-left:auto;margin-right:auto;}
+    .hero-actions{display:none;}
+  }
+  @media(max-width:420px){
+    .wrap{padding:0 20px;}
+    .hero-content{padding-left:20px;padding-right:20px;}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:100px 0;}
+  .section-head{max-width:620px;margin-bottom:52px;}
+  .section-eyebrow{font-family:'Gilroy',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.1em;color:var(--red);margin-bottom:12px;}
+  .section-head h2{font-family:'Gilroy',sans-serif;font-weight:900;font-style:italic;font-size:clamp(33px,4.4vw,48px);color:var(--indigo);}
+  .section-head p{margin-top:14px;font-size:18px;color:rgba(31,34,80,0.65);}
+
+  /* ---------- REDES ---------- */
+  .redes{
+    background:linear-gradient(155deg, var(--indigo) 0%, var(--blue) 100%);
+    text-align:center;position:relative;overflow:hidden;padding:110px 0;
+  }
+  .redes .section-eyebrow{color:var(--gold);}
+  .redes .section-head h2{color:var(--cream);}
+  .redes .section-head p{color:rgba(255,251,240,0.7);}
+  .redes .section-head{margin-left:auto;margin-right:auto;text-align:center;}
+  .redes-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px;position:relative;z-index:2;}
+  .rede-item{
+    padding:15px 26px;border-radius:6px;border:1.5px solid rgba(255,251,240,0.35);
+    font-family:'Gilroy',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.04em;
+    min-width:150px;text-align:center;color:var(--cream);text-decoration:none;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+  }
+  .rede-item svg{width:18px;height:18px;flex-shrink:0;}
+
+  /* ---------- CTA FINAL ---------- */
+  .cta-final{
+    text-align:center;padding:120px 0;
+    background:linear-gradient(160deg, var(--bg-orange) 0%, var(--bg-gold) 100%);
+  }
+  .cta-final h2{font-family:'Gilroy',sans-serif;font-weight:900;font-style:italic;font-size:clamp(32px,5vw,54px);color:var(--indigo);margin-bottom:26px;}
+  .cta-numero{width:100%;max-width:420px;height:auto;margin:0 auto 10px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--gray-footer);padding:40px 0 32px;font-size:13px;color:rgba(31,34,80,0.65);border-top:1px solid rgba(31,34,80,0.1);text-align:center;}
+  footer .foot-top{margin-bottom:22px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;}
+  .foot-logo{height:34px;width:auto;}
+  .foot-party-logo{height:34px;width:auto;}
+  .foot-legal-row{
+    display:flex;flex-direction:column;align-items:center;gap:6px;padding-top:20px;
+    border-top:1px solid rgba(31,34,80,0.12);line-height:1.6;max-width:640px;margin:0 auto;
+  }
+
+  @media(prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-photo">
+    <img src="foto-oficial-pedro-pereira.png" alt="Pedro Pereira">
+  </div>
+  <div class="hero-content">
+    <img src="pedro-pereira-marca.png" alt="Pedro Pereira — Deputado Estadual" class="hero-logo">
+    <img src="numero-slogan.png" alt="Agora é 55600 — Voto útil para continuar o trabalho!" class="hero-numero">
+    <div class="hero-actions">
+      <a href="#redes" class="link-cta">Redes sociais →</a>
+    </div>
+  </div>
+</section>
+
+<section class="redes" id="redes">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow display">Acompanhe de perto</div>
+      <h2>Redes sociais</h2>
+      <p>Links para os perfis oficiais da campanha.</p>
+    </div>
+    <div class="redes-links">
+      <a class="rede-item" href="https://www.instagram.com/deputadopedropereira" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        Instagram
+      </a>
+      <a class="rede-item" href="https://www.facebook.com/deputadopedropereira" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M14 21v-7h2.2l.3-2.6H14v-1.7c0-.75.2-1.3 1.3-1.3H16.6V6.1c-.23-.03-1-.1-1.9-.1-1.9 0-3.2 1.15-3.2 3.3v1.8H9.3v2.6H11.5v7" fill="currentColor" stroke="none"/></svg>
+        Facebook
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="cta">
+  <div class="wrap">
+    <h2>No dia da eleição, vote</h2>
+    <img src="numero-slogan.png" alt="Agora é 55600 — Voto útil para continuar o trabalho!" class="cta-numero">
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <img src="pedro-pereira-marca.png" alt="Pedro Pereira" class="foot-logo">
+      <img src="psd-logo.png" alt="PSD — Partido Social Democrático" class="foot-party-logo">
+    </div>
+    <div class="foot-legal-row">
+      <p>CNPJ de Campanha: 68.455.579/0001-10</p>
+      <p>Coligação Nosso Rio Grande não para. [MDB, PSD, Federação Renovação Solidária (Solidariedade-PRD)].</p>
+      <p>Governador 15 — Gabriel e Ernani Polo. Presidente 55 — Caiado. Senador 555 — Frederico Antunes. Senador 151 — Germano Rigotto.</p>
+      <p>Eleição 2026 — Pedro Pereira — Deputado Estadual</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
